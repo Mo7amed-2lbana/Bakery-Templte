@@ -1,0 +1,183 @@
+/* start global  */
+*{
+    box-sizing: border-box;
+}
+
+html,body{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Alegreya', serif;
+    height: 3000px;
+}
+
+ul{
+    list-style: none;
+}
+
+ul li a {
+    text-decoration: none;
+}
+/* end global  */
+
+/* start variable  */
+:root{
+    --main-color:#8E7754;
+    --second-color:#fff;
+    --main-trans:.4s;
+}
+/* end variable  */
+/* start header  */
+header{
+    background-image: url(../images/drew-coffman-1872.jpg);
+    background-size: cover;
+    background-position: center;
+}
+header::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.4);
+}
+
+nav{
+    margin-top: 0;
+    padding-top: 0;
+    z-index: 999;
+    transition: all var(--main-trans);
+}
+
+
+header .navbar-brand img{
+    height: 2.5rem;
+}
+
+.hide{
+    display: none;
+}
+@media(max-width:767px){
+    nav ul{
+        margin-top: 10px;
+        background-color: rgba(0,0,0,.5);
+    }
+}
+
+header .navbar-nav li{
+    margin-top: -8px;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    transition: var(--main-trans);
+}
+header .navbar-nav li:hover ,
+header .navbar-nav li.active{
+    border-top: 3px solid var(--main-color);
+}
+
+@media(max-width:991px){
+    header .navbar-nav li:hover ,
+    header .navbar-nav li.active{
+        border-top: none;
+        border-bottom: 3px solid var(--main-color);
+        
+    }
+}
+@media(max-width:767px){
+    nav ul li{
+        margin:0;
+        padding: 0;
+    }
+}
+
+header .navbar-nav li a{
+    transition: var(--main-trans);
+    font-size: 18px;
+}
+
+header .navbar-nav li a:focus{
+    color: var(--second-color);
+}
+header .navbar-nav li a:hover ,
+header .navbar-nav li.active a{
+    color: var(--main-color)!important;
+}
+
+header .content {
+    z-index: 2;
+}
+
+header .content h1 {
+    font-size: 60px;
+}
+@media(max-width:767px){
+    header .content h1{
+        font-size: 35px;
+    }
+}
+header .content button{
+    border: 2px solid #fff;
+    padding: 1rem  1.5rem;
+    color: var(--second-color);
+}
+header .content button.active{
+    background-color: var(--main-color);
+    transition: var(--main-trans);
+    border: 2px solid var(--main-color);
+    
+}
+
+header .content button:hover{
+    background-color: var(--second-color);
+    border: 2px solid #fff;
+    color: #333;
+}
+/* end header  */
+
+/* start about  */
+.about .item svg {
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+
+/* end about  */
+
+/* start our  */
+.our{
+    background-color: #F8F8F8;
+}
+/* end our  */
+
+/* start contact */
+.contact{
+    background-color: #F8F8F8;
+}
+
+.contact svg{
+    background-color: var(--main-color);
+}
+/* end contact */
+
+/* start footer  */
+footer {
+    background-color: #403D38;
+}
+footer p {
+    font-size: 16px;
+}
+
+footer ul li {
+    border-bottom: 1px solid #ffffff0d;
+}
+
+footer ul li:last-child{
+    border-bottom: none;
+}
+
+.copy-right p span{
+    color: #fff;
+    background-color: var(--main-color);
+}
+/* end footer  */
