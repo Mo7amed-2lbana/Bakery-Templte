@@ -60,6 +60,11 @@ header .navbar-brand img{
     display: none;
 }
 @media(max-width:767px){
+   nav svg {
+    color: #333;
+   }
+}
+@media(max-width:767px){
     nav ul{
         margin-top: 10px;
         background-color: rgba(0,0,0,.5);
